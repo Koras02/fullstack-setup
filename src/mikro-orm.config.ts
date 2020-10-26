@@ -3,6 +3,7 @@ import { ___prod___ } from "./constants";
 import { MikroORM } from "@mikro-orm/core";
 import path from "path";
 
+console.log("dirname: ", __dirname);
 export default  {
   migrations:{ 
      path: path.join(__dirname,"./migrations"), 

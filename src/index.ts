@@ -12,7 +12,6 @@ const main = async () => {
 //   await orm.em.nativeInsert(Post, {title: "my first post 2" });
  };
 
- 
  main().catch((err) => {
      console.error(err);
  });

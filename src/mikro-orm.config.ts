@@ -1,16 +1,17 @@
 import { Post } from "./entities/Post";
-import { ___prod___ } from "./constants";
+import { __prod__ } from "./constants";
 import { MikroORM } from "@mikro-orm/core";
 import path from "path";
 
-console.log("dirname: ", __dirname);
 export default  {
-  migrations:{ 
-     path: path.join(__dirname,"./migrations"), 
-     pattern: /^[\w-]+\d+\.[tj]s$/,
+  migrations: { 
+    path: path.join(__dirname, "./migrations"), 
+    pattern: /^[\w-]+\d+\.[tj]s$/,
   },
   entities: [Post],
   dbName: "lireddit",
+  user: "fullstack",
+  password: "wjdgh123!",
   type: "postgresql",
-  debug: !___prod___,
+  debug: !__prod__,
 } as Parameters<typeof MikroORM.init>[0];
